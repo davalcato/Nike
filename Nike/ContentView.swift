@@ -29,7 +29,7 @@ struct Home : View {
             HStack{
                 
                 Image("logo").resizable()
-                    .frame(width: 32.0, height: 32.0)
+                    .frame(width: 70.0, height: 30.0)
 //                    .renderingMode(.original)
                 
                 Spacer()
