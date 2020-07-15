@@ -78,7 +78,7 @@ struct MainView : View {
                     
                     HStack(spacing: 8){
                         
-                        Image("house.fill")
+                        Image(systemName: "house.fill")
                             .foregroundColor(index == 0 ? .white : Color.black.opacity(0.2))
                             .padding(10)
                             .background(index == 0 ? Color.black : Color.clear)
@@ -103,12 +103,12 @@ struct MainView : View {
                     
                     HStack(spacing: 8){
                         
-                        Image("suit.heart")
+                        Image(systemName: "suit.heart")
                             .foregroundColor(index == 1 ? .white : Color.black.opacity(0.2))
                             .padding(10)
                             .background(index == 0 ? Color.black : Color.clear)
                         
-                        Text(index == 1 ? "Home" : "")
+                        Text(index == 1 ? "Love" : "")
                             .foregroundColor(.black)
                     }
                 }
@@ -128,12 +128,12 @@ struct MainView : View {
                     
                     HStack(spacing: 8){
                         
-                        Image("person.fill")
+                        Image(systemName: "person.fill")
                             .foregroundColor(index == 2 ? .white : Color.black.opacity(0.2))
                             .padding(10)
                             .background(index == 0 ? Color.black : Color.clear)
                         
-                        Text(index == 2 ? "Home" : "")
+                        Text(index == 2 ? "Account" : "")
                             .foregroundColor(.black)
                     }
                 }
@@ -149,6 +149,8 @@ struct MainView : View {
         .background(Color.black.opacity(0.06).edgesIgnoringSafeArea(.all))
     }
 }
+                
+                
 
 
 
