@@ -27,14 +27,41 @@ struct Home : View {
             
             HStack{
                 
+                Image("logo")
+                    .renderingMode(.original)
+                
+                Spacer()
+                
+                Button(action: {}) {
+                    Image("menu").renderingMode(.original)
+                }
                 
             }
+            .padding()
+            
+            Spacer(minLength: 0)
         }
+        // All edges are ignored at this point
+        .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+    }
+}
+
+struct MainView : View {
+    
+    @State var index = 0
+    
+    var body: some View {
         
+        VStack(spacing: 0){
+            
+            // This is where tab view with tabs will be
+            
+            
+        }
+    
     }
     
 }
-
 
 
 
