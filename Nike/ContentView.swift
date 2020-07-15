@@ -56,11 +56,90 @@ struct MainView : View {
             
             // This is where tab view with tabs will be
             
+            // Here you will change tabs based on index...
             
+            Home()
+            
+            
+            // More tab Views here...
+            HStack(spacing: 0){
+                
+                Button {
+                    
+                    // The button animating here...
+                    
+                    withAnimation{
+                        
+                        index = 0
+                    }
+                    
+                } label: {
+                    
+                    HStack(spacing: 8){
+                        
+                        Image("house.fill")
+                            .foregroundColor(index == 0 ? .white : Color.black.opacity(0.2))
+                            .padding(10)
+                            .background(index == 0 ? Color.black : Color.clear)
+                        
+                        Text(index == 0 ? "Home" : "")
+                            .foregroundColor(.black)
+                    }
+                }
+                
+                Spacer(minLength: 0)
+                
+                Button {
+                    
+                    // The button animating here...
+                    
+                    withAnimation{
+                        
+                        index = 1
+                    }
+                    
+                } label: {
+                    
+                    HStack(spacing: 8){
+                        
+                        Image("suit.heart")
+                            .foregroundColor(index == 1 ? .white : Color.black.opacity(0.2))
+                            .padding(10)
+                            .background(index == 0 ? Color.black : Color.clear)
+                        
+                        Text(index == 1 ? "Home" : "")
+                            .foregroundColor(.black)
+                    }
+                }
+                
+                Spacer(minLength: 0)
+                
+                Button {
+                    
+                    // The button animating here...
+                    
+                    withAnimation{
+                        
+                        index = 2
+                    }
+                    
+                } label: {
+                    
+                    HStack(spacing: 8){
+                        
+                        Image("person.fill")
+                            .foregroundColor(index == 2 ? .white : Color.black.opacity(0.2))
+                            .padding(10)
+                            .background(index == 0 ? Color.black : Color.clear)
+                        
+                        Text(index == 2 ? "Home" : "")
+                            .foregroundColor(.black)
+                    }
+                }
+                
+            }
         }
-    
     }
-    
 }
 
 
