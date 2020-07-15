@@ -22,6 +22,8 @@ struct ContentView_Previews: PreviewProvider {
 
 struct Home : View {
     
+    @State var topIndex = 0
+    
     var body: some View{
         
         VStack{
@@ -41,8 +43,18 @@ struct Home : View {
             }
             .padding()
             
-            TopMenu()
-                .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
+            ScrollView(.horizontal, showsIndicators: false) {
+                
+                HStack(spacing: 30){
+                    
+                    ForEach(0..<topMenu.count){menu in
+                        
+                        TopMenu(menu: menu, index: $topIndex)
+                    }
+                }
+                .padding(.horizontal)
+            }
+            .padding(.top, 10)
             
             Spacer(minLength: 0)
         }
@@ -53,34 +65,25 @@ struct Home : View {
 
 struct TopMenu : View {
     
-    @State var index = 0
+    var menu : Int
+    @Binding var index : Int
     
     var body: some View{
         
-        HStack(spacing: 30){
+        VStack(spacing: 8){
             
-            ForEach(0..<topMenu.count,id: \.self){menu in
-                
-                VStack(spacing: 8){
-                    
-                    Text(topMenu[menu])
-                        .font(.system(size: 22))
-                        .fontWeight(index == menu ? .bold : .none)
-                        .foregroundColor(index == menu ? .black : .gray)
-                    
-                    Circle()
-                        .fill(Color.black)
-                        .frame(width: 10, height: 10)
-                        .opacity(index == menu ? 1 : 0)
-                    
-                }
-                
-            }
+            Text(topMenu[menu])
+                .font(.system(size: 22))
+                .fontWeight(index == menu ? .bold : .none)
+                .foregroundColor(index == menu ? .black : .gray)
+            
+            Circle()
+                .fill(Color.black)
+                .frame(width: 10, height: 10)
+                .opacity(index == menu ? 1 : 0)
             
         }
-        
     }
-    
 }
 
 var topMenu = ["Shoes","Clothing","By Sports","By Brand","By Price"]
