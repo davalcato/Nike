@@ -41,12 +41,49 @@ struct Home : View {
             }
             .padding()
             
+            TopMenu()
+                .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
+            
             Spacer(minLength: 0)
         }
         // All edges are ignored at this point
         .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
     }
 }
+
+struct TopMenu : View {
+    
+    @State var index = 0
+    
+    var body: some View{
+        
+        HStack(spacing: 30){
+            
+            ForEach(0..<topMenu.count,id: \.self){menu in
+                
+                VStack(spacing: 8){
+                    
+                    Text(topMenu[menu])
+                        .font(.system(size: 22))
+                        .fontWeight(index == menu ? .bold : .none)
+                        .foregroundColor(index == menu ? .black : .gray)
+                    
+                    Circle()
+                        .fill(Color.black)
+                        .frame(width: 10, height: 10)
+                        .opacity(index == menu ? 1 : 0)
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+var topMenu = ["Shoes","Clothing","By Sports","By Brand","By Price"]
 
 struct MainView : View {
     
