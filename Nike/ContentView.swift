@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!").padding()
+        
+        MainView()
     }
 }
 
@@ -138,7 +139,14 @@ struct MainView : View {
                 }
                 
             }
+            .padding(.top)
+            .padding(.horizontal, 25)
+            .padding(.bottom,UIApplication.shared.windows.first?.safeAreaInsets.bottom)
+            // The reason is because all edges are ignored...
+            
         }
+        .edgesIgnoringSafeArea(.all)
+        .background(Color.black.opacity(0.06).edgesIgnoringSafeArea(.all))
     }
 }
 
