@@ -89,6 +89,15 @@ struct Home : View {
                                 .foregroundColor(.white)
                             
                         }
+                        .padding(.horizontal)
+                        .padding(.vertical)
+                        // Here we fix Frame...
+                        .frame(width: UIScreen.main.bounds.width - 150, height: 360)
+                        .background(Color("Color1"))
+                        .cornerRadius(15)
+                        
+                        
+                        
                     }
                 }
             }
