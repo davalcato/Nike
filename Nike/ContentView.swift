@@ -82,6 +82,7 @@ struct Home : View {
                                 // Here is where the background Nike Logo...
                                 Image("logo")
                                     .resizable()
+                                    .renderingMode(.template)
                                     .frame(height: 110)
                                     .foregroundColor(Color.black.opacity(0.08))
                                     .padding(.top,55)
@@ -134,6 +135,20 @@ struct Home : View {
             
             // When the view is rotated to width it is then converted to height
             
+            HStack{
+                
+                Text("New Releases")
+                    .font(.system(size: 22))
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                
+                Spacer()
+                
+                Text("1/2")
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+            }
+            .padding(.top,25)
             // Menu...
             
             ScrollView(.horizontal, showsIndicators: false) {
@@ -156,7 +171,7 @@ struct Home : View {
                 .padding(.horizontal)
                 
             }
-            .padding(.top,25)
+            .padding(.top,20)
             
             Spacer(minLength: 0)
             
