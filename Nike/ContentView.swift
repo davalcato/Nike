@@ -64,42 +64,50 @@ struct Home : View {
                 VerticalMenu()
                     // VerticalMenu is push to the left screen...
                     .padding(.leading,-165)
+                    .zIndex(1)
                 // Another Scroll view goes here...
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     
                     HStack(spacing: 15){
                         
-                        VStack(alignment: .leading){
+                        ForEach(1...6,id: \.self){i in
                             
-                            Text("$300")
-                                .font(.system(size: 22))
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                            
-                            Image("p1")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                            
-                            Text("Men's Shoe")
-                                .foregroundColor(Color.white.opacity(0.6))
-                            Text("Nike Air Max")
-                                .font(.system(size: 22))
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
+                            VStack(alignment: .leading){
+                                
+                                Text("$300")
+                                    .font(.system(size: 22))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                
+                                Spacer(minLength: 0)
+                                
+                                Image("p\(i)")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                                Spacer(minLength: 0)
+                                
+                                Text("Men's Shoe")
+                                    .foregroundColor(Color.white.opacity(0.6))
+                                Text("Nike Air Max")
+                                    .font(.system(size: 22))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                
+                            }
+                            .padding(.horizontal)
+                            .padding(.vertical)
+                            // Here we fix Frame...
+                            .frame(width: UIScreen.main.bounds.width - 150, height: 360)
+                            .background(Color("Color\(i)"))
+                            .cornerRadius(15)
                             
                         }
-                        .padding(.horizontal)
-                        .padding(.vertical)
-                        // Here we fix Frame...
-                        .frame(width: UIScreen.main.bounds.width - 150, height: 360)
-                        .background(Color("Color1"))
-                        .cornerRadius(15)
-                        
-                        
-                        
                     }
+                    .padding(.leading,20)
                 }
+                .padding(.leading,-165)
             }
             // This is where the height get fix
             .padding(.top,30)
