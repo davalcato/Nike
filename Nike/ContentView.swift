@@ -62,10 +62,18 @@ struct Home : View {
             HStack{
                 
                 VerticalMenu()
+                    // VerticalMenu is push to the left screen...
+                    .padding(.leading,-165)
+                
                 
                 Spacer(minLength: 0)
                 
             }
+            // This is where the height get fix
+            .padding(.top,25)
+            .frame(height: 400)
+            
+            // When the view is rotated to width it is then converted to height
             
             Spacer(minLength: 0)
         }
@@ -165,8 +173,8 @@ struct VerticalMenu : View {
         .frame(width: 400)
         .background(Color.black.opacity(0.1))
         .cornerRadius(12)
-        // Rotating View starts here 
-        
+        // Rotating View starts here
+        .rotationEffect(.init(degrees: -90))
     }
 }
 
