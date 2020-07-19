@@ -57,12 +57,112 @@ struct Home : View {
             }
             .padding(.top,10)
             
+            // Here is the Vertical Menu view
             
+            HStack{
+                
+                VerticalMenu()
+                
+                Spacer(minLength: 0)
+                
+            }
             
             Spacer(minLength: 0)
         }
         // All edges are ignored at this point
         .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+    }
+}
+
+struct VerticalMenu : View {
+    
+    @State var index = 0
+    
+    var body: some View{
+        
+        HStack(spacing: 0){
+            
+            Button {
+                
+                index = 0
+                
+            } label: {
+                VStack(spacing: 5){
+                    
+                    Text("Men")
+                        .fontWeight(index == 0 ? .bold : .none)
+                        .foregroundColor(index == 0 ? .black : .gray)
+                    
+                    Circle()
+                        .fill(Color.black)
+                        .frame(width: 8, height: 8)
+                        .opacity(index == 0 ? 1 : 0)
+                }
+            }
+            Spacer(minLength: 0)
+            
+            Button {
+                
+                index = 1
+                
+            } label: {
+                VStack(spacing: 5){
+                    
+                    Text("Women")
+                        .fontWeight(index == 1 ? .bold : .none)
+                        .foregroundColor(index == 1 ? .black : .gray)
+                    
+                    Circle()
+                        .fill(Color.black)
+                        .frame(width: 8, height: 8)
+                        .opacity(index == 1 ? 1 : 0)
+                }
+            }
+            Spacer(minLength: 0)
+            
+            Button {
+                
+                index = 2
+                
+            } label: {
+                VStack(spacing: 5){
+                    
+                    Text("Custom")
+                        .fontWeight(index == 2 ? .bold : .none)
+                        .foregroundColor(index == 2 ? .black : .gray)
+                    
+                    Circle()
+                        .fill(Color.black)
+                        .frame(width: 8, height: 8)
+                        .opacity(index == 2 ? 1 : 0)
+                }
+            }
+            Spacer(minLength: 0)
+            
+            Button {
+                
+                index = 3
+                
+            } label: {
+                VStack(spacing: 5){
+                    
+                    Text("Sports")
+                        .fontWeight(index == 3 ? .bold : .none)
+                        .foregroundColor(index == 3 ? .black : .gray)
+                    
+                    Circle()
+                        .fill(Color.black)
+                        .frame(width: 8, height: 8)
+                        .opacity(index == 3 ? 1 : 0)
+                }
+            }
+        }
+        .padding(.vertical,30)
+        // Here is where we fix width for the view when rotated
+        .frame(width: 400)
+        .background(Color.black.opacity(0.1))
+        .cornerRadius(12)
+        
     }
 }
 
