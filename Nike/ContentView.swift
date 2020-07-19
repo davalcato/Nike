@@ -21,7 +21,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct Home : View {
-    
+  
     @State var topIndex = 0
     
     var body: some View{
@@ -42,7 +42,7 @@ struct Home : View {
                 
             }
             .padding()
-            
+         
             ScrollView(.horizontal, showsIndicators: false) {
                 
                 HStack(spacing: 30){
@@ -50,11 +50,14 @@ struct Home : View {
                     ForEach(0..<topMenu.count){menu in
                         
                         TopMenu(menu: menu, index: $topIndex)
+                        
                     }
                 }
                 .padding(.horizontal)
             }
-            .padding(.top, 10)
+            .padding(.top,10)
+            
+            
             
             Spacer(minLength: 0)
         }
@@ -82,9 +85,10 @@ struct TopMenu : View {
                 .frame(width: 10, height: 10)
                 .opacity(index == menu ? 1 : 0)
             
+            
+            }
         }
     }
-}
 
 var topMenu = ["Shoes","Clothing","By Sports","By Brand","By Price"]
 
