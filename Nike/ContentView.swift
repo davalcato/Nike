@@ -99,6 +99,8 @@ struct VerticalMenu : View {
                         .opacity(index == 0 ? 1 : 0)
                 }
             }
+            .padding(.leading)
+            
             Spacer(minLength: 0)
             
             Button {
@@ -127,7 +129,7 @@ struct VerticalMenu : View {
             } label: {
                 VStack(spacing: 5){
                     
-                    Text("Custom")
+                    Text("Kids")
                         .fontWeight(index == 2 ? .bold : .none)
                         .foregroundColor(index == 2 ? .black : .gray)
                     
@@ -156,12 +158,14 @@ struct VerticalMenu : View {
                         .opacity(index == 3 ? 1 : 0)
                 }
             }
+            .padding(.trailing)
         }
         .padding(.vertical,30)
         // Here is where we fix width for the view when rotated
         .frame(width: 400)
         .background(Color.black.opacity(0.1))
         .cornerRadius(12)
+        // Rotating View starts here 
         
     }
 }
