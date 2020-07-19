@@ -79,7 +79,13 @@ struct Home : View {
                             
                             ZStack(alignment: Alignment(horizontal: .center, vertical: .top)){
                                 
-                                //
+                                // Here is where the background Nike Logo...
+                                Image("logo")
+                                    .resizable()
+                                    .frame(height: 110)
+                                    .foregroundColor(Color.black.opacity(0.08))
+                                    .padding(.top,55)
+                                    .padding(.horizontal)
                                 
                                 VStack(alignment: .leading){
                                     
