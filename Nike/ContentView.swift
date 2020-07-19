@@ -64,13 +64,36 @@ struct Home : View {
                 VerticalMenu()
                     // VerticalMenu is push to the left screen...
                     .padding(.leading,-165)
+                // Another Scroll view goes here...
                 
-                
-                Spacer(minLength: 0)
-                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    
+                    HStack(spacing: 15){
+                        
+                        VStack(alignment: .leading){
+                            
+                            Text("$300")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                            
+                            Image("p1")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            
+                            Text("Men's Shoe")
+                                .foregroundColor(Color.white.opacity(0.6))
+                            Text("Nike Air Max")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                            
+                        }
+                    }
+                }
             }
             // This is where the height get fix
-            .padding(.top,25)
+            .padding(.top,30)
             .frame(height: 400)
             
             // When the view is rotated to width it is then converted to height
