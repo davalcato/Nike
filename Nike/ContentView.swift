@@ -20,170 +20,170 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct Home : View {
-  
-    @State var topIndex = 0
-    
-    var body: some View{
-        
-        VStack{
-            
-            HStack{
-                
-                Image("logo").resizable()
-                    .frame(width: 70.0, height: 30.0)
-//                    .renderingMode(.original)
-                
-                Spacer()
-                
-                Button(action: {}) {
-                    Image("menu").renderingMode(.original)
-                }
-                
-            }
-            .padding()
-         
-            ScrollView(.horizontal, showsIndicators: false) {
-                
-                HStack(spacing: 30){
-                    
-                    ForEach(0..<topMenu.count){menu in
-                        
-                        TopMenu(menu: menu, index: $topIndex)
-                        
-                    }
-                }
-                .padding(.horizontal)
-            }
-            .padding(.top,10)
-            
-            // Here is the Vertical Menu view
-            
-            HStack{
-                
-                VerticalMenu()
-                    // VerticalMenu is push to the left screen...
-                    .padding(.leading,-165)
-                    .zIndex(1)
-                // Moving the view in the stack once clicked...
-                
-                
-                
-                // Another Scroll view goes here...
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    
-                    HStack(spacing: 15){
-                        
-                        ForEach(1...6,id: \.self){i in
-                            
-                            ZStack(alignment: Alignment(horizontal: .center, vertical: .top)){
-                                
-                                // Here is where the background Nike Logo...
-                                Image("logo")
-                                    .resizable()
-                                    .renderingMode(.template)
-                                    .frame(height: 110)
-                                    .foregroundColor(Color.black.opacity(0.08))
-                                    .padding(.top,55)
-                                    .padding(.horizontal)
-                                
-                                VStack(alignment: .leading){
-                                    
-                                    Text("$300")
-                                        .font(.system(size: 22))
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                    
-                                    Spacer(minLength: 0)
-                                    
-                                    Image("p\(i)")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                    // Here the image is rotated...
-                                        .rotationEffect(.init(degrees: 12))
-                                    
-                                    Spacer(minLength: 0)
-                                    
-                                    Text("Men's Shoe")
-                                        .foregroundColor(Color.white.opacity(0.6))
-                                    Text("Nike Air Max")
-                                        .font(.system(size: 22))
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                    
-                                }
-                            }
-                            .padding(.horizontal)
-                            .padding(.vertical)
-                            // Here we fix Frame...
-                            .frame(width: UIScreen.main.bounds.width - 150, height: 360)
-                            .background(Color("Color\(i)"))
-                            .cornerRadius(15)
-                            
-                        }
-                    }
-                    .padding(.leading,20)
-                    .padding(.trailing)
-                    
-                }
-                .padding(.leading,-165)
-            }
-            // This is where the height gets fixed here
-            .padding(.top,30)
-            .frame(height: 400)
-            
-            // When the view is rotated to width it is then converted to height
-            
-            HStack{
-                
-                Text("New Releases")
-                    .font(.system(size: 22))
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                
-                Spacer()
-                
-                Text("1/2")
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-            }
-            .padding(.top,25)
-            .padding(.horizontal)
-            
-            
-            // Menu...
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                
-                HStack(spacing: 20){
-                    
-                    ForEach(2...6,id: \.self){i in
-                        
-                        Image("p\(i)")
-                            .resizable()
-                            .frame(width: 65, height: 35)
-                            .rotationEffect(.init(degrees: 12))
-                            .padding(.vertical,25)
-                            .padding(.horizontal)
-                            .background(Color("Color\(i)"))
-                            .cornerRadius(15)
-                        
-                    }
-                }
-                .padding(.horizontal)
-                
-            }
-            .padding(.top,20)
-            
-            Spacer(minLength: 0)
-            
-            
-        }
-        // All edges are ignored at this point
-        .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-    }
-}
+//struct Home : View {
+//
+//    @State var topIndex = 0
+//
+//    var body: some View{
+//
+//        VStack{
+//
+//            HStack{
+//
+//                Image("logo").resizable()
+//                    .frame(width: 70.0, height: 30.0)
+////                    .renderingMode(.original)
+//
+//                Spacer()
+//
+//                Button(action: {}) {
+//                    Image("menu").renderingMode(.original)
+//                }
+//
+//            }
+//            .padding()
+//
+//            ScrollView(.horizontal, showsIndicators: false) {
+//
+//                HStack(spacing: 30){
+//
+//                    ForEach(0..<topMenu.count){menu in
+//
+//                        TopMenu(menu: menu, index: $topIndex)
+//
+//                    }
+//                }
+//                .padding(.horizontal)
+//            }
+//            .padding(.top,10)
+//
+//            // Here is the Vertical Menu view
+//
+//            HStack{
+//
+//                VerticalMenu()
+//                    // VerticalMenu is push to the left screen...
+//                    .padding(.leading,-165)
+//                    .zIndex(1)
+//                // Moving the view in the stack once clicked...
+//
+//
+//
+//                // Another Scroll view goes here...
+//
+//                ScrollView(.horizontal, showsIndicators: false) {
+//
+//                    HStack(spacing: 15){
+//
+//                        ForEach(1...6,id: \.self){i in
+//
+//                            ZStack(alignment: Alignment(horizontal: .center, vertical: .top)){
+//
+//                                // Here is where the background Nike Logo...
+//                                Image("logo")
+//                                    .resizable()
+//                                    .renderingMode(.template)
+//                                    .frame(height: 110)
+//                                    .foregroundColor(Color.black.opacity(0.08))
+//                                    .padding(.top,55)
+//                                    .padding(.horizontal)
+//
+//                                VStack(alignment: .leading){
+//
+//                                    Text("$300")
+//                                        .font(.system(size: 22))
+//                                        .fontWeight(.bold)
+//                                        .foregroundColor(.white)
+//
+//                                    Spacer(minLength: 0)
+//
+//                                    Image("p\(i)")
+//                                        .resizable()
+//                                        .aspectRatio(contentMode: .fit)
+//                                    // Here the image is rotated...
+//                                        .rotationEffect(.init(degrees: 12))
+//
+//                                    Spacer(minLength: 0)
+//
+//                                    Text("Men's Shoe")
+//                                        .foregroundColor(Color.white.opacity(0.6))
+//                                    Text("Nike Air Max")
+//                                        .font(.system(size: 22))
+//                                        .fontWeight(.bold)
+//                                        .foregroundColor(.white)
+//
+//                                }
+//                            }
+//                            .padding(.horizontal)
+//                            .padding(.vertical)
+//                            // Here we fix Frame...
+//                            .frame(width: UIScreen.main.bounds.width - 150, height: 360)
+//                            .background(Color("Color\(i)"))
+//                            .cornerRadius(15)
+//
+//                        }
+//                    }
+//                    .padding(.leading,20)
+//                    .padding(.trailing)
+//
+//                }
+//                .padding(.leading,-165)
+//            }
+//            // This is where the height gets fixed here
+//            .padding(.top,30)
+//            .frame(height: 400)
+//
+//            // When the view is rotated to width it is then converted to height
+//
+//            HStack{
+//
+//                Text("New Releases")
+//                    .font(.system(size: 22))
+//                    .fontWeight(.bold)
+//                    .foregroundColor(.black)
+//
+//                Spacer()
+//
+//                Text("1/2")
+//                    .fontWeight(.bold)
+//                    .foregroundColor(.black)
+//            }
+//            .padding(.top,25)
+//            .padding(.horizontal)
+//
+//
+//            // Menu...
+//
+//            ScrollView(.horizontal, showsIndicators: false) {
+//
+//                HStack(spacing: 20){
+//
+//                    ForEach(2...6,id: \.self){i in
+//
+//                        Image("p\(i)")
+//                            .resizable()
+//                            .frame(width: 65, height: 35)
+//                            .rotationEffect(.init(degrees: 12))
+//                            .padding(.vertical,25)
+//                            .padding(.horizontal)
+//                            .background(Color("Color\(i)"))
+//                            .cornerRadius(15)
+//
+//                    }
+//                }
+//                .padding(.horizontal)
+//
+//            }
+//            .padding(.top,20)
+//
+//            Spacer(minLength: 0)
+//
+//
+//        }
+//        // All edges are ignored at this point
+//        .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+//    }
+//}
 
 struct VerticalMenu : View {
     
@@ -309,12 +309,17 @@ var topMenu = ["Shoes","Clothing","By Sports","By Brand","By Price"]
 
 struct MainView : View {
     
+    @State var topIndex = 0
     @State var index = 0
     @State var show = false
     @State var selectedIndex = 0
     
+    // Hero Animation...
     
-    var body: some View {
+    @Namespace var name
+    // Namespace cannot be shared with other views...
+    
+    var body: some View{
         
         ZStack{
             
@@ -324,7 +329,172 @@ struct MainView : View {
                 
                 // Here you will change tabs based on index...
                 
-                Home()
+                VStack{
+                    
+                    HStack{
+                        
+                        Image("logo").resizable()
+                            .frame(width: 70.0, height: 30.0)
+        //                    .renderingMode(.original)
+                        
+                        Spacer()
+                        
+                        Button(action: {}) {
+                            Image("menu").renderingMode(.original)
+                        }
+                        
+                    }
+                    .padding()
+                 
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        
+                        HStack(spacing: 30){
+                            
+                            ForEach(0..<topMenu.count){menu in
+                                
+                                TopMenu(menu: menu, index: $topIndex)
+                                
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                    .padding(.top,10)
+                    
+                    // Here is the Vertical Menu view
+                    
+                    HStack{
+                        
+                        VerticalMenu()
+                            // VerticalMenu is push to the left screen...
+                            .padding(.leading,-165)
+                            .zIndex(1)
+                        // Moving the view in the stack once clicked...
+                        
+                        
+                        
+                        // Another Scroll view goes here...
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            
+                            HStack(spacing: 15){
+                                
+                                ForEach(1...6,id: \.self){i in
+                                    
+                                    ZStack(alignment: Alignment(horizontal: .center, vertical: .top)){
+                                        
+                                        // Here is where the background Nike Logo...
+                                        Image("logo")
+                                            .resizable()
+                                            .renderingMode(.template)
+                                            .frame(height: 110)
+                                            .foregroundColor(Color.black.opacity(0.08))
+                                            .padding(.top,55)
+                                            .padding(.horizontal)
+                                        
+                                        VStack(alignment: .leading){
+                                            
+                                            Text("$300")
+                                                .font(.system(size: 22))
+                                                .fontWeight(.bold)
+                                                .foregroundColor(.white)
+                                            
+                                            Spacer(minLength: 0)
+                                            
+                                            Image("p\(i)")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                            // Here the image is rotated...
+                                                .rotationEffect(.init(degrees: 12))
+                                                .matchedGeometryEffect(id: "p\(i)", in: name)
+                                            
+                                            Spacer(minLength: 0)
+                                            
+                                            Text("Men's Shoe")
+                                                .foregroundColor(Color.white.opacity(0.6))
+                                            Text("Nike Air Max")
+                                                .font(.system(size: 22))
+                                                .fontWeight(.bold)
+                                                .foregroundColor(.white)
+                                            
+                                        }
+                                    }
+                                    .padding(.horizontal)
+                                    .padding(.vertical)
+                                    // Here we fix Frame...
+                                    .frame(width: UIScreen.main.bounds.width - 150, height: 360)
+                                    .background(Color("Color\(i)"))
+                                    .cornerRadius(15)
+                                    
+                                    // Here is where we open hero animation...
+                                    .onTapGesture {
+                                        
+                                        withAnimation(.spring()){
+                                            
+                                            selectedIndex = i
+                                            show.toggle()
+                                        }
+                                    }
+                                }
+                            }
+                            .padding(.leading,20)
+                            .padding(.trailing)
+                            
+                        }
+                        .padding(.leading,-165)
+                    }
+                    // This is where the height gets fixed here
+                    .padding(.top,30)
+                    .frame(height: 400)
+                    
+                    // When the view is rotated to width it is then converted to height
+                    
+                    HStack{
+                        
+                        Text("New Releases")
+                            .font(.system(size: 22))
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                        
+                        Spacer()
+                        
+                        Text("1/2")
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                    }
+                    .padding(.top,25)
+                    .padding(.horizontal)
+                    
+                    
+                    // Menu...
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        
+                        HStack(spacing: 20){
+                            
+                            ForEach(2...6,id: \.self){i in
+                                
+                                Image("p\(i)")
+                                    .resizable()
+                                    .frame(width: 65, height: 35)
+                                    .rotationEffect(.init(degrees: 12))
+                                    .padding(.vertical,25)
+                                    .padding(.horizontal)
+                                    .background(Color("Color\(i)"))
+                                    .cornerRadius(15)
+                                
+                            }
+                        }
+                        .padding(.horizontal)
+                        
+                    }
+                    .padding(.top,20)
+                    
+                    Spacer(minLength: 0)
+                    
+                    
+                }
+                // All edges are ignored at this point
+                .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
                 
                 // More tab Views here...
                 HStack(spacing: 0){
@@ -419,38 +589,49 @@ struct MainView : View {
                 
                 VStack{
                     
-                    HStack{
+                    VStack{
                         
-                        Button(action: {}) {
+                        HStack{
                             
-                            Image(systemName: "suit.heart")
-                                .font(.system(size: 22))
-                                .foregroundColor(.white)
-                        }
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            
-                            // Here we close hero view...
-                            withAnimation(.spring()){
+                            Button(action: {}) {
                                 
-                                show.toggle()
+                                Image(systemName: "suit.heart")
+                                    .font(.system(size: 22))
+                                    .foregroundColor(.white)
                             }
                             
-                        }) {
+                            Spacer()
                             
-                            Image(systemName: "xmark")
-                                .font(.system(size: 22))
-                                .foregroundColor(.white)
+                            Button(action: {
+                                
+                                // Here we close hero view...
+                                withAnimation(.spring()){
+                                    
+                                    show.toggle()
+                                }
+                                
+                            }) {
+                                
+                                Image(systemName: "xmark")
+                                    .font(.system(size: 22))
+                                    .foregroundColor(.white)
+                            }
+                            
                         }
-                        
+                        Image("p\(selectedIndex)")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 250)
+                            .matchedGeometryEffect(id: "p\(selectedIndex)", in: name)
                     }
-                    Image("p\(selectedIndex)")
+                    .padding()
+                    .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
+                    .background(Color("Color\(selectedIndex)"))
+                    
+                    Spacer()
                 }
-                
+                .background(Color.white)
             }
-            
         }
         .edgesIgnoringSafeArea(.all)
         .background(Color.black.opacity(0.06).edgesIgnoringSafeArea(.all))
