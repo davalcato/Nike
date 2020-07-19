@@ -65,6 +65,10 @@ struct Home : View {
                     // VerticalMenu is push to the left screen...
                     .padding(.leading,-165)
                     .zIndex(1)
+                // Moving the view in the stack once clicked...
+                
+                
+                
                 // Another Scroll view goes here...
                 
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -73,28 +77,35 @@ struct Home : View {
                         
                         ForEach(1...6,id: \.self){i in
                             
-                            VStack(alignment: .leading){
+                            ZStack(alignment: Alignment(horizontal: .center, vertical: .top)){
                                 
-                                Text("$300")
-                                    .font(.system(size: 22))
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
+                                //
                                 
-                                Spacer(minLength: 0)
-                                
-                                Image("p\(i)")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                
-                                Spacer(minLength: 0)
-                                
-                                Text("Men's Shoe")
-                                    .foregroundColor(Color.white.opacity(0.6))
-                                Text("Nike Air Max")
-                                    .font(.system(size: 22))
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                
+                                VStack(alignment: .leading){
+                                    
+                                    Text("$300")
+                                        .font(.system(size: 22))
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.white)
+                                    
+                                    Spacer(minLength: 0)
+                                    
+                                    Image("p\(i)")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                    // Here the image is rotated...
+                                        .rotationEffect(.init(degrees: 12))
+                                    
+                                    Spacer(minLength: 0)
+                                    
+                                    Text("Men's Shoe")
+                                        .foregroundColor(Color.white.opacity(0.6))
+                                    Text("Nike Air Max")
+                                        .font(.system(size: 22))
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.white)
+                                    
+                                }
                             }
                             .padding(.horizontal)
                             .padding(.vertical)
@@ -106,16 +117,44 @@ struct Home : View {
                         }
                     }
                     .padding(.leading,20)
+                    .padding(.trailing)
+                    
                 }
                 .padding(.leading,-165)
             }
-            // This is where the height get fix
+            // This is where the height gets fixed here
             .padding(.top,30)
             .frame(height: 400)
             
             // When the view is rotated to width it is then converted to height
             
+            // Menu...
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                
+                HStack(spacing: 20){
+                    
+                    ForEach(2...6,id: \.self){i in
+                        
+                        Image("p\(i)")
+                            .resizable()
+                            .frame(width: 65, height: 35)
+                            .rotationEffect(.init(degrees: 12))
+                            .padding(.vertical,25)
+                            .padding(.horizontal)
+                            .background(Color("Color\(i)"))
+                            .cornerRadius(15)
+                        
+                    }
+                }
+                .padding(.horizontal)
+                
+            }
+            .padding(.top,25)
+            
             Spacer(minLength: 0)
+            
+            
         }
         // All edges are ignored at this point
         .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
