@@ -628,6 +628,61 @@ struct MainView : View {
                     .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
                     .background(Color("Color\(selectedIndex)"))
                     
+                    HStack{
+                        
+                        VStack(alignment: .leading, spacing: 10) {
+                            
+                            Text("Men's Shoe")
+                                .foregroundColor(.gray)
+                            
+                            Text("Nike Air Max")
+                                .font(.system(size:22))
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                            
+                        }
+                        Spacer()
+                        
+                        Text("$300")
+                            .font(.system(size:22))
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                    }
+                    .padding()
+                    
+                    Text("The Air Max 97 made it clear that the Air revolution was far from over. Inspired by the ripple created from a drop of water into a pond, the 97 pushed the boundaries of design with silver reflective piping, amplified by light.")
+                        .foregroundColor(.black)
+                        .padding(.top,20)
+                    
+                    HStack{
+                        
+                        VStack(alignment: .leading, spacing: 12) {
+                            
+                            Text("Colors")
+                                .font(.title)
+                            
+                            HStack(spacing:15){
+                                
+                                ForEach(1...6,id: \.self){i in
+                                    
+                                    if i != selectedIndex{
+                                        
+                                        
+                                        Button(action: {}) {
+                                            
+                                            Circle()
+                                                .fill(Color("Color\(i)"))
+                                                .frame(width: 18, height: 18)
+                                            
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                   
+                    
                     Spacer()
                 }
                 .background(Color.white)
