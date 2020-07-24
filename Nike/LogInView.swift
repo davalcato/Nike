@@ -54,7 +54,7 @@ struct Home : View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 70, height: 70.0)
-                .clipShape(Circle())
+                
             
             HStack(spacing: 0){
                 
@@ -129,14 +129,25 @@ struct Home : View {
                                     .matchedGeometryEffect(id: "Tab", in: name)
                             }
                         }
-                        
                     }
                 }
             }
             .padding(.top,30)
             
+            // Login View goes here...
+            
+            
+            
             Spacer()
         }
+    }
+}
+
+struct Login : View {
+    
+    var body: some View{
+        
+        
     }
 }
 
