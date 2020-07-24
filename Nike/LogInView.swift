@@ -134,11 +134,12 @@ struct Home : View {
             }
             .padding(.top,30)
             
+            Login()
+            
             // Login View goes here...
             
             
-            
-            Spacer()
+            Spacer(minLength: 0)
         }
     }
 }
@@ -147,7 +148,41 @@ struct Login : View {
     
     var body: some View{
         
-        
+        VStack{
+            
+            HStack{
+                
+                VStack(alignment: .leading, spacing: 12) {
+                    
+                    Text("Hello Again,")
+                        .fontWeight(.bold)
+                    
+                    Text("MS.Joie")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    
+                    Button(action: {}) {
+                        
+                        Text("This isn't me")
+                            .font(.system(size: 14))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("Color"))
+                        
+                    }
+                }
+                
+                Spacer(minLength: 0)
+                
+                Image("profile")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 85, height: 85)
+                    .clipShape(Circle())
+            }
+            .padding(.horizontal,25)
+            .padding(.top,30)
+            
+        }
     }
 }
 
