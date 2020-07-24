@@ -618,11 +618,14 @@ struct MainView : View {
                             }
                             
                         }
+                        
                         Image("p\(selectedIndex)")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(height: 250)
                             .matchedGeometryEffect(id: "p\(selectedIndex)", in: name)
+                            .rotationEffect(.init(degrees: 12))
+                        
                     }
                     .padding()
                     .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
@@ -653,6 +656,7 @@ struct MainView : View {
                     Text("The Air Max 97 made it clear that the Air revolution was far from over. Inspired by the ripple created from a drop of water into a pond, the 97 pushed the boundaries of design with silver reflective piping, amplified by light.")
                         .foregroundColor(.black)
                         .padding(.top,20)
+                        .padding(.horizontal)
                     
                     HStack{
                         
@@ -672,18 +676,36 @@ struct MainView : View {
                                             
                                             Circle()
                                                 .fill(Color("Color\(i)"))
-                                                .frame(width: 18, height: 18)
+                                                .frame(width: 22, height: 22)
                                             
                                         }
-                                        
                                     }
                                 }
                             }
                         }
+                        
+                        Spacer(minLength: 0)
                     }
+                    .padding(.horizontal)
+                    .padding(.top,25)
                    
                     
                     Spacer()
+                    
+                    // Button goes here...
+                    
+                    
+                    Button(action: {}) {
+                        
+                        Text("Add To Cart")
+                            .fontWeight(.bold)
+                            .padding(.vertical)
+                            .foregroundColor(.white)
+                            .frame(width: UIScreen.main.bounds.width - 100)
+                            .background(Color.black)
+                            .clipShape(Capsule())
+                    }
+                    .padding(.bottom,40)
                 }
                 .background(Color.white)
             }
