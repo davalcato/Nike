@@ -134,17 +134,22 @@ struct Home : View {
             }
             .padding(.top,30)
             
-            Login()
             
             // Login View goes here...
             
+            // Able to change the Views Based on Index...
             
-            Spacer(minLength: 0)
+            if index == 0{
+                
+                Login()
+            }
         }
     }
 }
 
 struct Login : View {
+    
+    @State var password = ""
     
     var body: some View{
         
@@ -157,7 +162,7 @@ struct Login : View {
                     Text("Hello Again,")
                         .fontWeight(.bold)
                     
-                    Text("MS.Joie")
+                    Text("Ms. Joie")
                         .font(.title)
                         .fontWeight(.bold)
                     
@@ -166,8 +171,7 @@ struct Login : View {
                         Text("This isn't me")
                             .font(.system(size: 14))
                             .fontWeight(.bold)
-                            .foregroundColor(Color("Color"))
-                        
+                            .foregroundColor(Color("Color2"))
                     }
                 }
                 
@@ -181,6 +185,34 @@ struct Login : View {
             }
             .padding(.horizontal,25)
             .padding(.top,30)
+            
+            VStack(alignment: .leading, spacing: 15) {
+                
+                Text("Password")
+                    .font(.caption)
+                    .fontWeight(.bold)
+                    .foregroundColor(.gray)
+                
+                TextField("password", text: $password)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(5)
+                    
+                // Add shadow effects here....
+                    .shadow(color: Color.black.opacity(0.1), radius: 5, x:0, y: 5)
+                    .shadow(color: Color.black.opacity(0.08), radius: 5, x:0, y: -5)
+                
+                Button(action: {}) {
+                    
+                    Text("Foget Password")
+                        .font(.system(size: 14))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("Color2"))
+                }
+                .padding(.top,10)
+            }
+            .padding(.horizontal,25)
+            .padding(.top,25)
             
         }
     }
