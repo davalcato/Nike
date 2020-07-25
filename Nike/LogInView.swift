@@ -214,6 +214,23 @@ struct Login : View {
             .padding(.horizontal,25)
             .padding(.top,25)
             
+            // Login Button goes here...
+            
+            Button(action: {}) {
+                
+                Text("Login")
+                    .font(.system(size: 20))
+                    .fontWeight(.bold)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 50)
+                    .background(
+                        
+                        LinearGradient(gradient: .init(colors: [Color("Color1"),Color("Color2")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    )
+                    .cornerRadius(8)
+            }
+            .padding(.horizontal,25)
+            .padding(.top,20)
         }
     }
 }
