@@ -204,7 +204,7 @@ struct Login : View {
                 
                 Button(action: {}) {
                     
-                    Text("Foget Password")
+                    Text("Forgot Password")
                         .font(.system(size: 14))
                         .fontWeight(.bold)
                         .foregroundColor(Color("Color2"))
@@ -230,11 +230,40 @@ struct Login : View {
                     .cornerRadius(8)
             }
             .padding(.horizontal,25)
-            .padding(.top,20)
+            .padding(.top,25)
+            
+            // Social Media buttons goes here...
+            Button(action: {}) {
+                
+                HStack(spacing: 35){
+                    
+                    Image(systemName: "faceid")
+                        .font(.system(size: 26))
+                        .foregroundColor(Color("Color5"))
+                    
+                    Text("Login With Face ID")
+                        .font(.system(size: 20))
+                        .foregroundColor(Color("Color5"))
+                    
+                    Spacer(minLength: 0)
+                       
+                    
+                }
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 8).stroke(Color("Color5"),lineWidth: 1))
+
+            }
+            .padding(.top,30)
+            
+            HStack(spacing: 30){
+                
+                
+            }
         }
     }
 }
 
+var social = ["twitter", "fb", "google"]
 
 
 
