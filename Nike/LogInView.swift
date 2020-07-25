@@ -220,6 +220,7 @@ struct Login : View {
                 
                 Text("Login")
                     .font(.system(size: 20))
+                    .foregroundColor(.white)
                     .fontWeight(.bold)
                     .padding(.vertical)
                     .frame(width: UIScreen.main.bounds.width - 50)
@@ -254,11 +255,23 @@ struct Login : View {
 
             }
             .padding(.top,30)
+            .padding(.horizontal,25)
             
             HStack(spacing: 30){
                 
-                
+                ForEach(social,id: \.self){name in
+                    
+                    Button(action: {}) {
+                        
+                        Image(name)
+                            .renderingMode(.template)
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(Color(name == "google" ? "Color3": "Color3"))
+                    }
+                }
             }
+            .padding(.top,25)
         }
     }
 }
