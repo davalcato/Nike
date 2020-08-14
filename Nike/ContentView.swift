@@ -17,6 +17,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        
     }
 }
 
@@ -339,8 +340,34 @@ struct MainView : View {
                         
                         Spacer()
                         
+<<<<<<< Updated upstream
                         Button(action: {}) {
                             Image("menu").renderingMode(.original)
+=======
+                        
+                        
+                        Button(action: {
+                            
+                            withAnimation{
+                                
+                                // Changing Index here...
+                                index = 0
+                                
+                            }
+                            
+                            
+                        }) {
+                            
+                            HStack{
+                                
+                                Image(systemName: "house.fill")
+                                
+                                
+                            }
+                            
+                            
+//                            Image("menu").renderingMode(.original)
+>>>>>>> Stashed changes
                         }
                         
                     }
@@ -688,13 +715,11 @@ struct MainView : View {
                     }
                     .padding(.horizontal)
                     .padding(.top,25)
-                   
                     
                     Spacer()
                     
                     // Button goes here...
-                    
-                    
+                   
                     Button(action: {}) {
                         
                         Text("Add To Cart")
@@ -716,15 +741,3 @@ struct MainView : View {
 }
                 
                 
-
-
-
-
-
-
-
-
-
-
-
-
