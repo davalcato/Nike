@@ -14,6 +14,9 @@
 		75D0B99A24BBD98200C1F006 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D0B99924BBD98200C1F006 /* Preview Assets.xcassets */; };
 		75D0B9A524BBD98200C1F006 /* NikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0B9A424BBD98200C1F006 /* NikeTests.swift */; };
 		75D0B9B024BBD98200C1F006 /* NikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0B9AF24BBD98200C1F006 /* NikeUITests.swift */; };
+		8A81A891C25DC9CCEC6171C8 /* Pods_Nike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAAC186DB114041F19FE6DA /* Pods_Nike.framework */; };
+		B9A12D28E4020F63FC8CB710 /* Pods_NikeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0615B00B8DC6342150174E3F /* Pods_NikeTests.framework */; };
+		BD6BBBC4F3F113073B8FBE53 /* Pods_Nike_NikeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E1FCA8E16011D0461A71B0 /* Pods_Nike_NikeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01DBB2A03D5106AA5EA32282 /* Pods-Nike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike.release.xcconfig"; path = "Target Support Files/Pods-Nike/Pods-Nike.release.xcconfig"; sourceTree = "<group>"; };
+		0615B00B8DC6342150174E3F /* Pods_NikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09DE8B06F2C42909F300666A /* Pods-Nike-NikeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike-NikeUITests.release.xcconfig"; path = "Target Support Files/Pods-Nike-NikeUITests/Pods-Nike-NikeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		192531A07663F66D0AC96FE4 /* Pods-NikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NikeTests.release.xcconfig"; path = "Target Support Files/Pods-NikeTests/Pods-NikeTests.release.xcconfig"; sourceTree = "<group>"; };
+		46DAB4AA5949728B4A36D9A0 /* Pods-NikeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NikeTests.debug.xcconfig"; path = "Target Support Files/Pods-NikeTests/Pods-NikeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5AAAC186DB114041F19FE6DA /* Pods_Nike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75958ABC24CB7ED40087E02A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		75D0B98F24BBD97E00C1F006 /* Nike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D0B99224BBD97E00C1F006 /* NikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NikeApp.swift; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		75D0B9AB24BBD98200C1F006 /* NikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D0B9AF24BBD98200C1F006 /* NikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NikeUITests.swift; sourceTree = "<group>"; };
 		75D0B9B124BBD98200C1F006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82E1FCA8E16011D0461A71B0 /* Pods_Nike_NikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nike_NikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9963444F67BDA441D6DB6124 /* Pods-Nike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike.debug.xcconfig"; path = "Target Support Files/Pods-Nike/Pods-Nike.debug.xcconfig"; sourceTree = "<group>"; };
+		C1032D6C862CC1BA58D4F5CE /* Pods-Nike-NikeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike-NikeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nike-NikeUITests/Pods-Nike-NikeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A81A891C25DC9CCEC6171C8 /* Pods_Nike.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9A12D28E4020F63FC8CB710 /* Pods_NikeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD6BBBC4F3F113073B8FBE53 /* Pods_Nike_NikeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28D944304383AA7EE55629C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AAAC186DB114041F19FE6DA /* Pods_Nike.framework */,
+				82E1FCA8E16011D0461A71B0 /* Pods_Nike_NikeUITests.framework */,
+				0615B00B8DC6342150174E3F /* Pods_NikeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		75D0B98624BBD97E00C1F006 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +107,7 @@
 				75D0B9AE24BBD98200C1F006 /* NikeUITests */,
 				75D0B99024BBD97E00C1F006 /* Products */,
 				FF5D9163D7C878BFA858322F /* Pods */,
+				28D944304383AA7EE55629C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +163,12 @@
 		FF5D9163D7C878BFA858322F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				9963444F67BDA441D6DB6124 /* Pods-Nike.debug.xcconfig */,
+				01DBB2A03D5106AA5EA32282 /* Pods-Nike.release.xcconfig */,
+				C1032D6C862CC1BA58D4F5CE /* Pods-Nike-NikeUITests.debug.xcconfig */,
+				09DE8B06F2C42909F300666A /* Pods-Nike-NikeUITests.release.xcconfig */,
+				46DAB4AA5949728B4A36D9A0 /* Pods-NikeTests.debug.xcconfig */,
+				192531A07663F66D0AC96FE4 /* Pods-NikeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -148,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75D0B9B424BBD98200C1F006 /* Build configuration list for PBXNativeTarget "Nike" */;
 			buildPhases = (
+				AF498E53F186B86612F6AE04 /* [CP] Check Pods Manifest.lock */,
 				75D0B98B24BBD97E00C1F006 /* Sources */,
 				75D0B98C24BBD97E00C1F006 /* Frameworks */,
 				75D0B98D24BBD97E00C1F006 /* Resources */,
+				7E42CD727A204EC19F7A5F2E /* [CP] Embed Pods Frameworks */,
+				62810940FDF4768DB57F5B55 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75D0B9B724BBD98200C1F006 /* Build configuration list for PBXNativeTarget "NikeTests" */;
 			buildPhases = (
+				07AF87D2D8714735A1E8AAD4 /* [CP] Check Pods Manifest.lock */,
 				75D0B99C24BBD98200C1F006 /* Sources */,
 				75D0B99D24BBD98200C1F006 /* Frameworks */,
 				75D0B99E24BBD98200C1F006 /* Resources */,
@@ -183,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75D0B9BA24BBD98200C1F006 /* Build configuration list for PBXNativeTarget "NikeUITests" */;
 			buildPhases = (
+				0893046D83BCCEDF5BE4E188 /* [CP] Check Pods Manifest.lock */,
 				75D0B9A724BBD98200C1F006 /* Sources */,
 				75D0B9A824BBD98200C1F006 /* Frameworks */,
 				75D0B9A924BBD98200C1F006 /* Resources */,
+				3C32F89C3CA2579AA72D3768 /* [CP] Embed Pods Frameworks */,
+				6A30D1A8938B23F31B33AD99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +303,143 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07AF87D2D8714735A1E8AAD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NikeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0893046D83BCCEDF5BE4E188 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nike-NikeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C32F89C3CA2579AA72D3768 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike-NikeUITests/Pods-Nike-NikeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike-NikeUITests/Pods-Nike-NikeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nike-NikeUITests/Pods-Nike-NikeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62810940FDF4768DB57F5B55 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike/Pods-Nike-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike/Pods-Nike-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nike/Pods-Nike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A30D1A8938B23F31B33AD99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike-NikeUITests/Pods-Nike-NikeUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike-NikeUITests/Pods-Nike-NikeUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nike-NikeUITests/Pods-Nike-NikeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E42CD727A204EC19F7A5F2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike/Pods-Nike-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike/Pods-Nike-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nike/Pods-Nike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF498E53F186B86612F6AE04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nike-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		75D0B98B24BBD97E00C1F006 /* Sources */ = {
@@ -426,6 +602,7 @@
 		};
 		75D0B9B524BBD98200C1F006 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9963444F67BDA441D6DB6124 /* Pods-Nike.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +625,7 @@
 		};
 		75D0B9B624BBD98200C1F006 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01DBB2A03D5106AA5EA32282 /* Pods-Nike.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,6 +648,7 @@
 		};
 		75D0B9B824BBD98200C1F006 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46DAB4AA5949728B4A36D9A0 /* Pods-NikeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +671,7 @@
 		};
 		75D0B9B924BBD98200C1F006 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 192531A07663F66D0AC96FE4 /* Pods-NikeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +694,7 @@
 		};
 		75D0B9BB24BBD98200C1F006 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1032D6C862CC1BA58D4F5CE /* Pods-Nike-NikeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +715,7 @@
 		};
 		75D0B9BC24BBD98200C1F006 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09DE8B06F2C42909F300666A /* Pods-Nike-NikeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

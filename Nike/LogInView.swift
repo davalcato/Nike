@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct LogInView: View {
+    @State private var isUnlocked = false
+    
     var body: some View {
         
         // This is for smaller size iPhones...
         
-        VStack{
+        VStack {
             
             if UIScreen.main.bounds.height < 750{
                 
@@ -27,6 +30,40 @@ struct LogInView: View {
             }
         }
         .padding(.vertical)
+        
+//        VStack {
+//            if self.isUnlocked {
+//                Text("Unlocked")
+//            } else {
+//                Text("Locked")
+//
+//            }
+//        }
+//        .onAppear(perform: authenticate)
+    }
+    
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+        
+        // Here we check to see whether biometric is possible
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "we need to use the camera in order to use this app."
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                DispatchQueue.main.async {
+                    if success {
+                        self.isUnlocked = true
+                        
+                    } else {
+                        // otherwise there is a problem
+                    }
+                }
+            }
+        } else {
+            //  no biometrics detected
+            
+        }
     }
 }
         
@@ -169,6 +206,7 @@ struct Home : View {
 
 struct Login : View {
     
+    @State private var isUnlocked = false
     @State var password = ""
     
     var body: some View{
@@ -236,7 +274,10 @@ struct Login : View {
             
             // Login Button goes here...
             
-            Button(action: {}) {
+            Button(action: {
+                print("logIn is tapped!")
+                
+            }) {
                 
                 Text("Login")
                     .font(.system(size: 20))
@@ -254,7 +295,17 @@ struct Login : View {
             .padding(.top,25)
             
             // Social Media buttons goes here...
-            Button(action: {}) {
+            Button(action: {
+                print("face is tapped!")
+
+                if self.isUnlocked {
+                    // print("unlocked")
+//                    self.navigateToDashboard.toggle()
+                } else {
+                    // Text("Locked")
+//                    self.navigateToLogin.toggle()
+                }
+            }) {
                 
                 HStack(spacing: 35){
                     
@@ -361,7 +412,10 @@ struct SignUp : View {
             
             // Login Button goes here...
             
-            Button(action: {}) {
+            Button(action: {
+                print("Sign Up is tapped!")
+                
+            }) {
                 
                 Text("Sign Up")
                     .font(.system(size: 20))
@@ -379,7 +433,10 @@ struct SignUp : View {
             .padding(.top,25)
             
             // Social Media buttons goes here...
-            Button(action: {}) {
+            Button(action: {
+                print("Sign Up FaceID is tapped!")
+                
+            }) {
                 
                 HStack(spacing: 35){
                     

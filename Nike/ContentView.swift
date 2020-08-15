@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct ContentView: View {
     var body: some View {
-        
         MainView()
     }
 }
