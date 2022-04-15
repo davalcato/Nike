@@ -15,39 +15,40 @@ struct LogInView: View {
         
         // This is for smaller size iPhones...
         
-        VStack {
-            
-            if UIScreen.main.bounds.height < 750{
-                
-                ScrollView(.vertical, showsIndicators: false) {
-                    
-                    Home()
-                }
-            }
-            else{
-                
-                Home()
-            }
-        }
-        .padding(.vertical)
-        
 //        VStack {
-//            if self.isUnlocked {
-//                Text("Unlocked")
-//            } else {
-//                Text("Locked")
-//
+//            
+//            if UIScreen.main.bounds.height < 750{
+//                
+//                ScrollView(.vertical, showsIndicators: false) {
+//                    
+//                    Home()
+//                }
+//            }
+//            else{
+//                
+//                Home()
 //            }
 //        }
-//        .onAppear(perform: authenticate)
+//        .padding(.vertical)
+        
+        VStack {
+            if self.isUnlocked {
+                Text("Unlocked")
+            } else {
+                Text("Locked")
+
+            }
+        }
+        .onAppear(perform: authenticate)
     }
     
     func authenticate() {
         let context = LAContext()
         var error: NSError?
         
-        // Here we check to see whether biometric is possible
+        // Here we check to see if biometric is possible
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            // If possible....
             let reason = "we need to use the camera in order to use this app."
             
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
@@ -57,12 +58,20 @@ struct LogInView: View {
                         
                     } else {
                         // otherwise there is a problem
+                        self.isUnlocked = false
+                        
+                        let ac = UIAlertController(title: "Authentication failed", message: "You could not be verified: please try again", preferredStyle: .alert)
+                        ac.addAction(UIAlertAction(title: "OK", style: .default))
+                        
+                        
+                        print(error?.localizedDescription ?? "Failed to authenticate")
+                       
                     }
                 }
             }
         } else {
-            //  no biometrics detected
-            
+            //  No biometrics detected
+            let ac = UIAlertController(title: "Biometry unavailable", message: "Your device is not configured for biometric authentication", preferredStyle: .alert)
         }
     }
 }
@@ -302,8 +311,8 @@ struct Login : View {
                     // print("unlocked")
 //                    self.navigateToDashboard.toggle()
                 } else {
-                    // Text("Locked")
-//                    self.navigateToLogin.toggle()
+                     Text("Locked")
+                    
                 }
             }) {
                 
@@ -333,7 +342,11 @@ struct Login : View {
                 
                 ForEach(social,id: \.self){name in
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        print("social is tapped!")
+                        
+                        
+                    }) {
                         
                         Image(name)
                             .renderingMode(.template)
@@ -464,7 +477,10 @@ struct SignUp : View {
                 
                 ForEach(social,id: \.self){name in
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        print("social is tapped!")
+                        
+                    }) {
                         
                         Image(name)
                             .renderingMode(.template)
